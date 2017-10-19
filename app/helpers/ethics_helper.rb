@@ -1,0 +1,2 @@
+module EthicsHelper
+end

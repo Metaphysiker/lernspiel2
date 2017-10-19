@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails lernspiel2: production" uuid="e23c0d3f-fcf4-44fa-a4b8-dd3f2bfc38b1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>lernspiel2</user-name>
+    </data-source>
+    <data-source name="Rails lernspiel2: test" uuid="2821808e-e509-4152-9588-5085c9177443">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="Rails lernspiel2: development" uuid="17a9b4ff-6f05-4012-b2de-448d752f4951">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>

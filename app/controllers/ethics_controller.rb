@@ -1,0 +1,2 @@
+class EthicsController < ApplicationController
+end
