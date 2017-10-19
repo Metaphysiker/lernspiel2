@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root 'pages#welcome'
   get '/about/', to: 'pages#about', as: "about"
   get '/courses/', to: 'pages#courses', as: "courses"
+  get '/ethics/:step', to: 'courses#ethics', as: "ethics"
 
 end
