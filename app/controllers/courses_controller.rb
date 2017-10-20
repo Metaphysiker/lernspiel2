@@ -10,11 +10,12 @@ class CoursesController < ApplicationController
     @order = [
         "introduction",
         "ethicaltheories",
-        "kintro"
-
+        "kintro",
+        "dintro"
     ]
 
-    print @order[0]
+    print @order
+    print @order[@step]
     @currentstep = @order[@step]
 
   end
