@@ -1,0 +1,54 @@
+<div class="alert alert-info">
+  <strong>Finde heraus, ob du ein Konsequentialist oder ein Deontologe bist!</strong>
+</div>
+
+
+<% i = 1 %>
+<% @whatareyou.each do |array| %>
+
+    <div id="<%= i %>" class="card hidden-xl-down">
+      <div class="card-header">
+        <%= array[0] %>
+      </div>
+      <div class="card-block">
+        <button type="button" name="<%= i %>" value="<%= array[3][0] %>" class="btn btn-primary multilinebutton btn-block"><%= array[1] %></button>
+        <br>
+        <br>
+        <button type="button" name="<%= i %>" value="<%= array[3][1] %>" class="btn btn-primary multilinebutton btn-block"><%= array[2] %></button>
+      </div>
+    </div>
+    <% i = i + 1 %>
+<% end %>
+
+<div id="util" class="hidden-xl-down">
+  <div class="panel panel-default">
+    <div class="panel-heading">Du bist Utilitarist! </div>
+    <div class="panel-body">
+      <p>Ergebnis</p>
+      <%= link_to "Weiter", ethics_path("tintroduction"), class: "btn btn-primary btn-lg" %>
+    </div>
+  </div>
+</div>
+<br>
+
+<%= link_to "Weiter", ethics_path("tintroduction"), class: "btn btn-primary btn-lg" %>
+
+
+<script>
+    $(document).ready(function () {
+        var score = 0;
+        var currentnumber = 1;
+        $('#' + currentnumber).removeClass("hidden-xl-down");
+
+        $('.btn-block').on('click', function (){
+            score = parseInt($(this).attr("value")) + score;
+            $('#' + currentnumber).fadeOut("slow", function(){
+                currentnumber = currentnumber + 1;
+                $('#' + currentnumber).fadeIn("slow").removeClass("hidden-xl-down");
+                if(currentnumber === 4){
+                    $('#util').fadeIn("slow").removeClass("hidden-xl-down");
+                }
+            });
+        });
+    });
+</script>

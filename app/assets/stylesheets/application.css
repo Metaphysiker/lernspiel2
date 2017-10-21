@@ -86,3 +86,7 @@ h5 {
     hyphens: auto;
     text-align: left;
 }
+
+.multilinebutton{
+    white-space:normal !important;
+}
