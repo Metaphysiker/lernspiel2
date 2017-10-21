@@ -24,8 +24,12 @@
     <b>Du scheinst ein Konsequentialist zu sein</b>!
   </div>
   <div class="card-block">
-    Du tendierst dazu, fragwürdige Handlungen zu begehen, um Menschen das Leben zu retten, Konflikte zu vermeiden oder andere Probleme aus dem Weg zu räumen.
+    <p>
+      Du tendierst dazu, fragwürdige Handlungen zu begehen, um Menschen das Leben zu retten, Konflikte zu vermeiden oder andere Probleme aus dem Weg zu räumen.
+    </p>
+    <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
   </div>
+
 </div>
 
 <div id="deon" class="card hidden-xl-down">
@@ -33,7 +37,10 @@
     <b>Du scheinst ein Deontologe zu sein</b>!
   </div>
   <div class="card-block">
-    Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.
+    <p>
+      Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.
+    </p>
+    <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
   </div>
 </div>
 
