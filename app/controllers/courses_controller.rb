@@ -28,7 +28,14 @@ class CoursesController < ApplicationController
     @whatareyou = [
         ["Würdest du einen Menschen umbringen, um 5 Menschen das Leben zu retten?", "Ja, ich würde dafür einen Menschen umbringen.", "Nein, ich würde dafür keinen Menschen umbringen.",[0,1]],
         ["Würdest du lügen, um einen Streit zwischen deinen Freunden zu vermeiden?", "Ja, ich würde dafür lügen.", "Nein, ich würde meinen Freunden die Wahrheit sagen.",[0,1]],
-        ["Würdest du einen Lehrer bestechen, so dass ein unartiger Schüler schlechtere Noten bekommt?", "Antwort", "Antwort", [0,1]]
+        ["Du hast 200 Franken von einem reichen Freund geliehen. Er ist sehr vergesslich, er hat bereits vergessen, dass er dir 200 Franken geliehen hat. Würdest du ihm das Geld wie versprochen zurückgeben oder würdest du es für einen guten Zweck spenden?", "Ich würde das Geld für einen guten Zweck spenden.", "Ich würde das Geld wie versprochen zurückgeben.",[0,1]],
+        ["Du kennst einen Politiker, der korrupt ist. Leider hast du nicht genügend Beweise, um ihn auf normalen Wege hinters Licht zu führen. Würdest du einen Richter bestechen, so dass der korrupte Politiker dennoch eingesperrt wird?", "Ja, ich würde dafür den Richter bestechen.", "Nein, ich würde dafür keinen Richter bestechen.", [0,1]],
+        ["Du bist Arzt. Du hast einen kranken Patienten und du weisst, dass keine deiner Medikamente ihm helfen können. Würdest du dem Patienten ein Placebo verabreichen und ihm sagen, dass ihm dieses Medikament helfen kann?", "Ja, ich würde dem Patienten ein Placebo geben.", "Nein, ich würde dem Patienten sagen, dass ich keine Medikamente für ihn habe.", [0,1]],
+        ["Ein Terrorist hat eine Bombe in der Stadt versteckt, die Tausenden von Menschen das Leben kosten wird. Würdest du den Terroristen foltern, um den Ort der Bombe herauszufinden?", "Ja, ich würde den Terroristen foltern.", "Nein, ich würde den Terroristen nicht foltern.", [0,1]],
+        ["Die örtliche Feuerwehr ist seit Jahren unterbezahlt und leidet an Personalmangel. Die Behörden weigern sich vehement, in die Feuerwehr zu investieren. Würdest du ein Haus anzünden, um die Behörden zum Umdenken zu bewegen?", "Ja, ich würde deswegen ein Haus anzünden.", "Nein, ich würde deswegen kein Haus anzünden.", [0,1]],
+        ["Du bist Chirurg und ein Experte für Transplantationschirurgie. Du hast 4 Patienten, die dringend neue Organe benötigen. Zufälligerweise sitzt eine Person im Wartesaal,
+          dessen Organe allen 4 Patienten das Leben retten könnten. Würdest du diese Person im Wartesaal für die anderen 5 Patienten opfern?", "Ja, ich würde diese Person für die anderen 4 opfern.", "Nein, ich würde diese Person nicht opfern.", [0,1]],
+        ["Terroristen haben eine Geisel genommen und fordern Lösegeld. Die fordernden Terroristen sind bekannt dafür, dass sie ihr Wort halten und die Geisseln nach Erhalt des Lösegelds freilassen. Würdest du mit diesen Terroristen verhandeln und das Lösegeld zahlen?", "Ja, ich würde mit den Terroristen verhandeln.", "Nein, ich würde nicht mit den Terroristen verhandeln.", [0,1]],
     ]
 
   end
