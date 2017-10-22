@@ -1,5 +1,8 @@
 class CoursesController < ApplicationController
   def ethics
+    print request.format
+    @request = request.format
+
     @step = 0
     if params[:step] == nil
       @step = 0
@@ -56,5 +59,10 @@ class CoursesController < ApplicationController
         ["Tugendethik", 6],
         ["Ob eine Handlung gut oder schlecht ist, hängt von der dahinterstehenden Motivation ab.", 6]
     ]
+
+    respond_to do |format|
+      format.html
+      format.js { render 'courses/ethics/fader.js.erb' }
+    end
   end
 end

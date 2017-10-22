@@ -1,4 +1,4 @@
 <div class="mt-5">
-  <%= link_to "Zurück", ethics_path(@step - 1), class: "btn btn-primary btn-lg" %>
-  <%= link_to "Weiter", ethics_path(@step + 1), class: "btn btn-primary btn-lg" %>
+  <%= link_to "Zurück", ethics_path(@step - 1), class: "btn btn-primary btn-lg", remote: true  %>
+  <%= link_to "Weiter", ethics_path(@step + 1), class: "btn btn-primary btn-lg", remote: true  %>
 </div>

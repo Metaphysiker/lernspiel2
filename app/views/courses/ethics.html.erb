@@ -1,1 +1,9 @@
-<%= render "courses/ethics/#{@currentstep}" %>
+<% if @request == "text/html" %>
+    <div id="fader">
+      <%= render "courses/ethics/#{@currentstep}" %>
+    </div>
+    <% else %>
+      <div id="fader">
+
+      </div>
+<% end %>
