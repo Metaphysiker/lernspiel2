@@ -13,7 +13,10 @@ class CoursesController < ApplicationController
         "kintro",
         "dintro",
         "dork",
-        "tintro"
+        "tintro",
+        "memory",
+        "caseintro",
+        "utgf"
     ]
 
     @currentstep = @order[@step]
@@ -39,5 +42,19 @@ class CoursesController < ApplicationController
         ["Terroristen haben eine Geisel genommen und fordern Lösegeld. Die fordernden Terroristen sind bekannt dafür, dass sie ihr Wort halten und die Geisseln nach Erhalt des Lösegelds freilassen. Würdest du mit diesen Terroristen verhandeln und das Lösegeld zahlen?", "Ja, ich würde mit den Terroristen verhandeln.", "Nein, ich würde nicht mit den Terroristen verhandeln.", [0,1]],
     ]
 
+    @memory = [
+        ["Ob eine Handlung gut oder schlecht ist, hängt von den Folgen ab, die eine Handlung nach sich zieht.", 1],
+        ["Konsequentialismus", 1],
+        ["Ob eine Handlung gut oder schlecht ist, hängt von der Handlung selbst ab.", 2],
+        ["Deontologie", 2],
+        ["Eine Handlung ist gut, wenn sie viel Glück produziert und schlecht, wenn sie viel Leid verursacht.", 3],
+        ["Utilitarismus", 3],
+        ["Klugheit, Weisheit, Gerechtigkeit, Tapferkeit, Mässigung sind vorzügliche Eigenschaften eines Menschen.", 4],
+        ["Tugende", 4],
+        ["Was du nicht willst, dass man dir tu, das füg auch keinem andern zu.", 5],
+        ["Goldene Regel", 5],
+        ["Tugendethik", 6],
+        ["Ob eine Handlung gut oder schlecht ist, hängt von der dahinterstehenden Motivation ab.", 6]
+    ]
   end
 end

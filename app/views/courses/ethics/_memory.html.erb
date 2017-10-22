@@ -1,0 +1,90 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+<div class="alert alert-info">
+  <strong>Memory mit ethischen Begriffen: Finde die passenden Karten!</strong>
+</div>
+
+
+<div class="hidden-sm-up">
+  Da dein Gerät einen kleinen Bildschirm hat, kannst du diese Aufgabe überspringen: BUTTON
+</div>
+
+<% i = 0 %>
+<div class="row">
+  <% @memory.each do |card| %>
+      <% i = i + 1 %>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div id="<%=i%>" value="<%=card[1]%>" class="flip p-2">
+
+          <div class="front grey-bg yellowcard">
+
+          </div>
+
+          <div class="back grey-bg">
+            <h4><%= card[0] %></h4>
+          </div>
+
+        </div>
+      </div>
+  <% end %>
+
+</div>
+
+<script>
+    $(document).ready(function() {
+        var flippedcard1 = 0;
+        var flippedcard2 = 0;
+        var score = 0;
+
+        $('.flip').on('click', function (){
+            var currentcard = $(this).attr("id");
+
+            console.log(flippedcard1 + " | " + flippedcard2);
+
+            if((flippedcard1 > 0) && (flippedcard2 > 0)){
+                $('#' + flippedcard1).flip(false);
+                $('#' + flippedcard2).flip(false);
+                flippedcard1 = 0;
+                flippedcard2 = 0;
+
+            }  else if($('#' + currentcard).children().hasClass('greenishcard')){
+                console.log("nothing should happen");
+            } else if((flippedcard1 > 0) && (flippedcard1 !== currentcard)) {
+                $('#' + currentcard).flip('toggle');
+                if ($('#' + currentcard).attr("value") === $('#' + flippedcard1).attr("value")) {
+
+                    $('#' + currentcard).removeClass('flip');
+                    $('#' + flippedcard1).removeClass('flip');
+
+                    $('#' + currentcard).children().removeClass('yellowishcard').addClass('greenishcard');
+                    $('#' + flippedcard1).children().removeClass('yellowishcard').addClass('greenishcard');
+
+                    flippedcard1 = 0;
+                    score = score + 1;
+
+                    if(score === 6){
+                        swal({
+                            icon: "success"
+                        });
+                    }
+
+                } else {
+                    flippedcard2 = currentcard;
+                }
+            } else if(flippedcard1 === currentcard){
+                $('#' + currentcard).flip('toggle');
+                flippedcard1 = 0;
+            } else {
+                $('#' + currentcard).flip('toggle');
+              flippedcard1 = $(this).attr("id");
+            }
+        });
+
+
+        $(".flip").flip({
+            trigger: 'manual'
+        });
+
+    });
+</script>
