@@ -7,7 +7,7 @@ class CreateEthics < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_column :ethics, :answers, :json
+    add_column :ethics, :answers, :json, default: []
     add_column :ethics, :progress, :integer, default: 0
     add_column :ethics, :finished, :boolean, default: false
 

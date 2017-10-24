@@ -81,11 +81,26 @@ class CoursesController < ApplicationController
   def addanswer
     @questionnumber = params[:questionnumber]
     @answer = params[:answer]
-
     e = current_user.ethic
-    e.update(answers: [@questionnumber, @answer])
+    e.update(answers: addorupdateanswer(@questionnumber, @answer, e))
+
     print e.answers
 
     head :ok
+  end
+
+  private
+
+  def addorupdateanswer(questionnumber, answer, ethic)
+    existinganswers = ethic.answers
+
+    existinganswers.each do |a|
+      if a[0] == questionnumber
+        a[1] = answer
+        return existinganswers
+      end
+    end
+
+    return existinganswers.push([questionnumber,answer])
   end
 end

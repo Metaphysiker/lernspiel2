@@ -56,7 +56,6 @@
             score = parseInt($(this).attr("value")) + score;
             var text = $(this).attr("text");
             $('#' + currentnumber).fadeOut("slow", function(){
-                currentnumber = currentnumber + 1;
                 console.log(score);
                 $.ajax({
                     type: "POST",
@@ -64,6 +63,7 @@
                     data: {questionnumber: currentnumber, answer: text }
                 });
 
+                currentnumber = currentnumber + 1;
 
                 $('#' + currentnumber).fadeIn("slow").removeClass("hidden-xl-down");
                 if(currentnumber === 10){

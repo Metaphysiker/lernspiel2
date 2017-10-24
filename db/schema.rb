@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20171024102250) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.json "answers"
+    t.json "answers", default: []
     t.integer "progress", default: 0
     t.boolean "finished", default: false
     t.index ["user_id"], name: "index_ethics_on_user_id"
