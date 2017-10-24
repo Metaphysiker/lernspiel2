@@ -65,4 +65,16 @@ class CoursesController < ApplicationController
       format.js { render 'courses/ethics/fader.js.erb' }
     end
   end
+
+  def addpoints
+    @points = params[:points]
+
+    current_user.points = current_user.points + @points.to_i
+    current_user.save
+
+    @points = current_user.points
+
+    render 'addpoints.js.erb'
+
+  end
 end

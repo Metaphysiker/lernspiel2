@@ -1,0 +1,7 @@
+$( "#points" ).fadeOut( "slow", function() {
+    // Animation complete.
+
+    $("#points").empty().append(<%= @points %>).fadeIn("slow");
+
+});
+

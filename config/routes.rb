@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/about/', to: 'pages#about', as: "about"
   get '/courses/', to: 'pages#courses', as: "courses"
   get '/ethics/:step', to: 'courses#ethics', as: "ethics"
+  get '/addpoints/:points', to: 'courses#addpoints', as: "addpoints"
 
 end
