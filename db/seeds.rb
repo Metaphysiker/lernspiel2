@@ -9,6 +9,6 @@
 user = User.new(
     email: "test",
     password: 'test',
-    password_confirmation: 'teat'
+    password_confirmation: 'test'
 )
 user.save!

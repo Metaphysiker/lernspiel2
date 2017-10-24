@@ -17,13 +17,12 @@ ActiveRecord::Schema.define(version: 20171024102250) do
 
   create_table "ethics", force: :cascade do |t|
     t.string "dork"
-    t.string "previousanswers", default: ["empty"], array: true
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "answers"
     t.integer "progress", default: 0
     t.boolean "finished", default: false
-    t.index ["previousanswers"], name: "index_ethics_on_previousanswers", using: :gin
     t.index ["user_id"], name: "index_ethics_on_user_id"
   end
 

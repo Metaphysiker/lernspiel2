@@ -11,9 +11,9 @@
         <%= array[0] %>
       </div>
       <div class="card-block">
-        <button type="button" name="<%= i %>" value="<%= array[3][0] %>" class="btn btn-primary multilinebutton btn-block"><%= array[1] %></button>
+        <button type="button" name="<%= i %>" text="<%= array[1] %>" value="<%= array[3][0] %>" class="btn btn-primary multilinebutton btn-block"><%= array[1] %></button>
         <br>
-        <button type="button" name="<%= i %>" value="<%= array[3][1] %>" class="btn btn-primary multilinebutton btn-block"><%= array[2] %></button>
+        <button type="button" name="<%= i %>" text="<%= array[2] %>" value="<%= array[3][1] %>" class="btn btn-primary multilinebutton btn-block"><%= array[2] %></button>
       </div>
     </div>
     <% i = i + 1 %>
@@ -54,9 +54,17 @@
 
         $('.btn-block').on('click', function (){
             score = parseInt($(this).attr("value")) + score;
+            var text = $(this).attr("text");
             $('#' + currentnumber).fadeOut("slow", function(){
                 currentnumber = currentnumber + 1;
                 console.log(score);
+                $.ajax({
+                    type: "POST",
+                    url: "/ethicsm/addanswer",
+                    data: {questionnumber: currentnumber, answer: text }
+                });
+
+
                 $('#' + currentnumber).fadeIn("slow").removeClass("hidden-xl-down");
                 if(currentnumber === 10){
                     if(score >= 5){

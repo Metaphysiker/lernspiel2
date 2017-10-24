@@ -77,4 +77,15 @@ class CoursesController < ApplicationController
     render 'addpoints.js.erb'
 
   end
+
+  def addanswer
+    @questionnumber = params[:questionnumber]
+    @answer = params[:answer]
+
+    e = current_user.ethic
+    e.update(answers: [@questionnumber, @answer])
+    print e.answers
+
+    head :ok
+  end
 end
