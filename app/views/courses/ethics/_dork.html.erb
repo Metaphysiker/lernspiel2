@@ -55,6 +55,7 @@
         $('.btn-block').on('click', function (){
             score = parseInt($(this).attr("value")) + score;
             var text = $(this).attr("text");
+
             $('#' + currentnumber).fadeOut("slow", function(){
                 console.log(score);
                 $.ajax({
@@ -69,10 +70,19 @@
                 if(currentnumber === 10){
                     if(score >= 5){
                         $('#deon').fadeIn("slow").removeClass("hidden-xl-down");
+                        $.ajax({
+                            type: "POST",
+                            url: "/ethicsm/addanswer",
+                            data: {questionnumber: currentnumber + 1, answer: "deon" }
+                        });
                     } else {
                         $('#kons').fadeIn("slow").removeClass("hidden-xl-down");
+                        $.ajax({
+                            type: "POST",
+                            url: "/ethicsm/addanswer",
+                            data: {questionnumber: currentnumber + 1, answer: "kons" }
+                        });
                     }
-
                 }
             });
         });
