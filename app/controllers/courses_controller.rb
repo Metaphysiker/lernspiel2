@@ -60,6 +60,8 @@ class CoursesController < ApplicationController
         ["Ob eine Handlung gut oder schlecht ist, hängt von der dahinterstehenden Motivation ab.", 6]
     ]
 
+    @memory.shuffle!
+
     respond_to do |format|
       format.html
       format.js { render 'courses/ethics/fader.js.erb' }

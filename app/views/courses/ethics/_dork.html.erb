@@ -69,6 +69,14 @@
                 $('#' + currentnumber).fadeIn("slow").removeClass("hidden-xl-down");
                 if(currentnumber === 10){
                     if(score >= 5){
+                        swal({
+                            title: 'Du scheinst ein Deontologe zu sein!',
+                            width: 600,
+                            text: 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.',
+                            animation: false,
+                            customClass: 'animated bounceIn'
+                        });
+
                         $('#deon').fadeIn("slow").removeClass("hidden-xl-down");
                         $.ajax({
                             type: "POST",
@@ -76,6 +84,14 @@
                             data: {questionnumber: currentnumber + 1, answer: "deon" }
                         });
                     } else {
+                        swal({
+                            title: 'Du scheinst ein Konsequentialist zu sein!',
+                            width: 600,
+                            text: 'Du tendierst dazu, fragwürdige Handlungen zu begehen, um Menschen das Leben zu retten, Konflikte zu vermeiden oder andere Probleme aus dem Weg zu räumen.',
+                            animation: false,
+                            customClass: 'animated bounceIn'
+                        });
+
                         $('#kons').fadeIn("slow").removeClass("hidden-xl-down");
                         $.ajax({
                             type: "POST",

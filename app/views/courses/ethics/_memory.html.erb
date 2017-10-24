@@ -1,9 +1,5 @@
-<div class="alert alert-info">
+<div class="alert alert-info mt-3">
   <strong>Memory mit ethischen Begriffen: Finde die passenden Karten!</strong>
-</div>
-
-<div class="cardsize">
-  <span class="align-middle">middle</span>
 </div>
 
 <div class="hidden-sm-up">
@@ -17,12 +13,12 @@
       <div class="col-xs-6 col-sm-4 col-md-3">
         <div id="<%=i%>" value="<%=card[1]%>" class="flip p-2">
 
-          <div class="front mx-auto cardsize">
-            <span class="align-text-bottom">text-bottom</span>
+          <div class="front yellowishcard text-center cardsize p-3">
+
           </div>
 
-          <div class="back yellowishcard text-center cardsize align-middle">
-            <h5><%= card[0] %></h5>
+          <div class="back yellowishcard text-center cardsize p-3">
+            <%= card[0] %>
           </div>
 
         </div>
