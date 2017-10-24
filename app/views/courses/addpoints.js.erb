@@ -1,7 +1,25 @@
-$( "#points" ).fadeOut( "slow", function() {
-    // Animation complete.
+$('.counter').each(function() {
+    var $this = $(this),
+        countTo = <%= @points %>;
 
-    $("#points").empty().append(<%= @points %>).fadeIn("slow");
+    $({ countNum: $this.text()}).animate({
+            countNum: countTo
+        },
+
+        {
+
+            duration: 5000,
+            easing:'linear',
+            step: function() {
+                $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+            }
+
+        });
+
+
 
 });
-

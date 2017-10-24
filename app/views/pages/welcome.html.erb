@@ -16,7 +16,15 @@
     $(document).ready(function () {
 
         $('#addpoints').on('click', function (){
-            $.ajax("/addpoints/500")
+            $.ajax("/addpoints/500");
+            swal({
+                title: 'jQuery HTML example',
+                html: $('<div>')
+                    .addClass('some-class')
+                    .text('jQuery is everywhere.'),
+                animation: false,
+                customClass: 'animated tada'
+            });
         });
     });
 </script>

@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.all.min.js" integrity="sha256-nfbZ2BnFr4dgchZRXhCi5uXTjG93NdgqiwhPSpD94T8=" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
             <li class="nav-item">
-              <div class="navbar-brand">Punkte: <span id="points"><%= current_user.points %></span></div>
+              <div class="navbar-brand">Punkte: <span class="counter"><%= current_user.points %></span></div>
             </li>
             <li class="nav-item">
               <div class="navbar-brand"><%= current_user.email %></div>
