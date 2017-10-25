@@ -91,6 +91,20 @@ class CoursesController < ApplicationController
     head :ok
   end
 
+  def exercisecompleted
+    model = params[:model]
+    exercise = params[:exercise]
+    @points = params[:points]
+
+    usermodel = model.singularize.classify.constantize.find_by_user_id(current_user.id)
+
+    currentprogress = current_user.ethic.progress
+
+    usermodel.update(progress: currentprogress + 10)
+
+    render 'addpoints.js.erb'
+  end
+
   private
 
   def addorupdateanswer(questionnumber, answer, ethic)

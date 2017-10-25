@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get '/ethics/:step', to: 'courses#ethics', as: "ethics"
   get '/addpoints/:points', to: 'courses#addpoints', as: "addpoints"
   post '/ethicsm/addanswer', to: 'courses#addanswer', as: "addanswer"
+  post '/exercisecompleted', to: 'courses#exercisecompleted', as: "exercisecompleted"
 
 end
