@@ -60,9 +60,10 @@
                     score = score + 1;
 
                     if(score === 6){
-                        swal({
-                            icon: "success"
-                        });
+                        var title = 'Memory abgeschlossen!';
+                        var text = 'Du hast alle Paare gefunden!';
+
+                        resultswal(title, text, 500, "ethic", "memory", "completed");
                     }
 
                 } else {
