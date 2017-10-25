@@ -70,7 +70,14 @@
                 if(currentnumber === 10){
                     if(score >= 5){
 
-                        resultswal('Du scheinst ein Deontologe zu sein!', 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.');
+                        var title = 'Du scheinst ein Deontologe zu sein!';
+                        var text = 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.';
+
+                        //$.when(resultswal('Du scheinst ein Deontologe zu sein!', 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.', 500)).then(resultswal('Du scheinst ein Deontologe zu sein!', 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.', 500));
+                        //var nextswal = exercisecompletedswal("Übung abgeschlossen!", "Du gewinnst 500 Punkte!", "ethic", "dork", "completed", 500);
+                        //tadaswal('Du scheinst ein Deontologe zu sein!', 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.', nextswal);
+
+                        resultswal(title, text, 500, "ethic", "dork", "completed");
 
                         $('#deon').fadeIn("slow").removeClass("hidden-xl-down");
                         $.ajax({
@@ -79,7 +86,7 @@
                             data: {questionnumber: currentnumber + 1, answer: "deon" }
                         });
                     } else {
-                        resultswal('Du scheinst ein Konsequentialist zu sein!', 'Du tendierst dazu, fragwürdige Handlungen zu begehen, um Menschen das Leben zu retten, Konflikte zu vermeiden oder andere Probleme aus dem Weg zu räumen.');
+                        resultswal('Du scheinst ein Konsequentialist zu sein!', 'Du tendierst dazu, fragwürdige Handlungen zu begehen, um Menschen das Leben zu retten, Konflikte zu vermeiden oder andere Probleme aus dem Weg zu räumen.', 500);
 
                         $('#kons').fadeIn("slow").removeClass("hidden-xl-down");
                         $.ajax({

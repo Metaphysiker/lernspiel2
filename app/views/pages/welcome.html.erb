@@ -14,21 +14,6 @@
 
 <script>
     $(document).ready(function () {
-        swal({
-            title: 'Du bist x',
-            text: "Congrats!!",
-            type: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then(function () {
-            swal(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
-        });
 
         $('#addpoints').on('click', function (){
             $.ajax("/addpoints/500");

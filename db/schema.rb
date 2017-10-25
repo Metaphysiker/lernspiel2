@@ -14,12 +14,14 @@ ActiveRecord::Schema.define(version: 20171024102250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "ethics", force: :cascade do |t|
     t.string "dork"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.hstore "exercises", default: {"dork"=>"no", "memory"=>"no"}
     t.json "answers", default: []
     t.integer "progress", default: 0
     t.boolean "finished", default: false
