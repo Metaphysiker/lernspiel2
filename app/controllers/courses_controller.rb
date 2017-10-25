@@ -103,12 +103,25 @@ class CoursesController < ApplicationController
 
     usermodel.update(progress: currentprogress + 10)
 
-    usermodel.exercises[exercise] = state
-    usermodel.save
+    if usermodel.exercises[exercise] == "completed"
+      print "NOTHING!!!"
+       head :ok
+    else
+      print usermodel.exercises[exercise]
 
-    print usermodel
+      usermodel.exercises[exercise] = state
+      print usermodel.exercises[exercise]
+      usermodel.save
 
-    render 'addpoints.js.erb'
+      print usermodel.exercises
+
+      current_user.points = current_user.points + @points.to_i
+      current_user.save
+
+      @points = current_user.points
+
+      render 'addpoints.js.erb'
+    end
   end
 
   private

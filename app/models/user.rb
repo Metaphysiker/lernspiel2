@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
 
   # Execute this callback after an record is saved only on create
-  after_save :create_and_associate_ethic, on: :create
+  after_create :create_and_associate_ethic
 
   private
 

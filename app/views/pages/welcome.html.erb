@@ -15,6 +15,11 @@
 <script>
     $(document).ready(function () {
 
+        var title = 'Du scheinst ein Deontologe zu sein!';
+        var text = 'Du tendierst dazu, deinen Pflichten nachzugehen, selbst wenn sie unschöne Folgen nach sich ziehen.';
+
+        resultswal(title, text, 500, "ethic", "dork", "completed");
+
         $('#addpoints').on('click', function (){
             $.ajax("/addpoints/500");
             swal({
