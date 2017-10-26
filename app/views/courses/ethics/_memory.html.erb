@@ -3,7 +3,17 @@
 </div>
 
 <div class="hidden-sm-up">
-  Da dein Gerät einen kleinen Bildschirm hat, kannst du diese Aufgabe überspringen: BUTTON
+  Da dein Gerät einen kleinen Bildschirm hat, kannst du diese Aufgabe überspringen:
+  <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
+</div>
+
+<div id="backforward" class="card hidden-xl-down">
+  <div class="card-header">
+    <b>Übung abgeschlossen!</b>!
+  </div>
+  <div class="card-block">
+    <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
+  </div>
 </div>
 
 <% i = 0 %>
@@ -64,6 +74,7 @@
                         var text = 'Du hast alle Paare gefunden!';
 
                         resultswal(title, text, 500, "ethic", "memory", "completed");
+                        $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
                     }
 
                 } else {

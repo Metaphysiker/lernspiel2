@@ -18,7 +18,7 @@ class CoursesController < ApplicationController
         "dork",
         "tintro",
         "memory",
-        "caseintro",
+        "whichisright",
         "utgf"
     ]
 
@@ -99,7 +99,7 @@ class CoursesController < ApplicationController
 
     usermodel = model.singularize.classify.constantize.find_by_user_id(current_user.id)
 
-    currentprogress = current_user.ethic.progress
+    currentprogress = usermodel.progress
 
     usermodel.update(progress: currentprogress + 10)
 
