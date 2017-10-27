@@ -54,14 +54,14 @@
 
         $('.btn-block').on('click', function (){
             score = parseInt($(this).attr("value")) + score;
-            var text = $(this).attr("text");
+            var te = $(this).attr("text");
 
             $('#' + currentnumber).fadeOut("slow", function(){
                 console.log(score);
                 $.ajax({
                     type: "POST",
                     url: "/ethicsm/addanswer",
-                    data: {questionnumber: currentnumber, answer: text }
+                    data: {questionnumber: currentnumber, answer: te }
                 });
 
                 currentnumber = currentnumber + 1;

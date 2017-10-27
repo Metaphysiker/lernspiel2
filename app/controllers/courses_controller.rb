@@ -19,7 +19,7 @@ class CoursesController < ApplicationController
         "tintro",
         "memory",
         "whichisright",
-        "utgf"
+        "prok"
     ]
 
     @currentstep = @order[@step]
@@ -83,6 +83,8 @@ class CoursesController < ApplicationController
   def addanswer
     @questionnumber = params[:questionnumber]
     @answer = params[:answer]
+    print @answer
+    print @questionnumber
     e = current_user.ethic
     e.update(answers: addorupdateanswer(@questionnumber, @answer, e))
 
