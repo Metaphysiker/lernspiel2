@@ -1,6 +1,70 @@
 <div class="jumbotron text-justify yellowish mt-3">
   <h1>Was spricht für den Konsequentialismus?</h1>
   <br>
+  <p>
+    Der Konsequentialismus
+  </p>
+
+
+  <% if current_user.ethic.konsanswers.empty? %>
+      <p>
+        Konsequentialisten
+      </p>
+
+      <% else %>
+
+      <p>
+        Bei der Frage:
+      </p>
+      <p>
+        <b><%= @whatareyou[current_user.ethic.konsanswers.first.first.to_i][0] %></b>
+      </p>
+      <p>
+        Hast du geantwortet mit:
+      </p>
+      <p>
+        <b><%= current_user.ethic.konsanswers.first[1] %></b>
+      </p>
+      <p>
+        Damit teilst du die Intuition mancher Befürworter des Konsequentialismus:
+        Selbst wenn die Handlung an sich <b>ein Übel</b> ist, so wird dieses Übel hingenommen,
+        um <b>ein grösseres Übel zu verhindern</b>.
+      </p>
+      <p>
+        Diese Art, in mehr oder weniger zu denken, ist uns allen wohlbekannt:
+        Wenn wir die Wahl zwischen zwei Produkten haben, die für unsere Zwecke beide mehr oder weniger gleich gut sind,
+        dann wählen wir das günstigere aus.
+        Wenn wir die Wahl zwischen zwei Arbeitsstellen haben, die grundsätzlich sehr ähnlich sind,
+        dann wählen wir die Stelle aus, die mehr Lohn bringt.
+        Wäre es nicht sogar <b>dumm</b>, sich in diesen Fällen andersherum zu entscheiden?
+      </p>
+      <p>
+        Der Konsequentialismus
+      </p>
+      <p>
+        Diese Art und Weise zu denken, ist uns allen wohlbekannt.
+        Oftmals tun wir Dinge, um <b>ein Ziel zu erreichen</b> oder um <b>einen bestimmten Zustand hervorzurufen</b>.
+        Dabei ist
+      </p>
+      <p>
+
+      </p>
+  <% end %>
+
+
+
+
+  <p>
+    Bei der Frage:
+  </p>
+  <p>
+    <b><%= @whatareyou[0][0] %></b>
+  </p>
+  <p>
+    Hast du geantwortet mit:
+  </p>
+
+
 
   <p>
     Die drei vorgestellten ethischen Theorien bewerten Handlungen unterschiedlich.

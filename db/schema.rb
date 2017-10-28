@@ -18,11 +18,14 @@ ActiveRecord::Schema.define(version: 20171024102250) do
 
   create_table "ethics", force: :cascade do |t|
     t.string "dork"
+    t.text "order", default: ["introduction", "ethicaltheories", "kintro", "dintro", "dork", "tintro", "memory", "whichisright", "prok", "prod", "prot", "konk", "kond", "kont"], array: true
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.hstore "exercises", default: {"dork"=>"no", "memory"=>"no"}
-    t.json "answers", default: []
+    t.hstore "answers", default: {}
+    t.hstore "konsanswers", default: {}
+    t.hstore "deonanswers", default: {}
     t.integer "progress", default: 0
     t.boolean "finished", default: false
     t.index ["user_id"], name: "index_ethics_on_user_id"

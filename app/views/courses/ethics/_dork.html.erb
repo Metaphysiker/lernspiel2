@@ -3,7 +3,7 @@
 </div>
 
 
-<% i = 1 %>
+<% i = 0 %>
 <% @whatareyou.each do |array| %>
 
     <div id="<%= i %>" class="card hidden-xl-down">
@@ -49,7 +49,7 @@
 <script>
     $(document).ready(function () {
         var score = 0;
-        var currentnumber = 1;
+        var currentnumber = 0;
         $('#' + currentnumber).removeClass("hidden-xl-down");
 
         $('.btn-block').on('click', function (){
@@ -67,7 +67,7 @@
                 currentnumber = currentnumber + 1;
 
                 $('#' + currentnumber).fadeIn("slow").removeClass("hidden-xl-down");
-                if(currentnumber === 10){
+                if(currentnumber === 9){
                     if(score >= 5){
 
                         var title = 'Du scheinst ein Deontologe zu sein!';
@@ -79,7 +79,7 @@
                         $.ajax({
                             type: "POST",
                             url: "/ethicsm/addanswer",
-                            data: {questionnumber: currentnumber + 1, answer: "deon" }
+                            data: {questionnumber: currentnumber, answer: "deon" }
                         });
                     } else {
 
@@ -92,7 +92,7 @@
                         $.ajax({
                             type: "POST",
                             url: "/ethicsm/addanswer",
-                            data: {questionnumber: currentnumber + 1, answer: "kons" }
+                            data: {questionnumber: currentnumber, answer: "kons" }
                         });
                     }
                 }
