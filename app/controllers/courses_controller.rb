@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_action :authenticate_user!
   def ethics
     print request.format
     @request = request.format
@@ -19,8 +20,8 @@ class CoursesController < ApplicationController
         "tintro",
         "memory",
         "whichisright",
-        "prok",
-        "prod",
+        "dcases",
+        "kinstrument",
         "prot",
         "konk",
         "kond",
@@ -95,6 +96,7 @@ class CoursesController < ApplicationController
       e.update(dork: @answer)
       rearrangeorder
     else
+      e.answers[@questionnumber] = @answer
       if @answer.downcase.include?("ja")
         e.konsanswers[@questionnumber] = @answer
       else
@@ -106,7 +108,6 @@ class CoursesController < ApplicationController
 
     if @questionnumber.to_i == 9
       e.update(dork: @answer)
-      rearrangeorder
     end
 
     print e.answers
@@ -145,10 +146,6 @@ class CoursesController < ApplicationController
 
       render 'addpoints.js.erb'
     end
-  end
-
-  def rearrangeorder
-    puts "hoooow"
   end
 
 end
