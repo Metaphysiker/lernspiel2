@@ -53,18 +53,26 @@
         $('#' + currentnumber).removeClass("hidden-xl-down");
 
         $('.btn-block').on('click', function (){
+            $(".btn-block").prop("disabled", true);
+
+            setTimeout(function(){
+                $(".btn-block").prop("disabled", false);
+            }, 1000);
+
+
+            currentnumber = currentnumber + 1;
             score = parseInt($(this).attr("value")) + score;
             var te = $(this).attr("text");
 
-            $('#' + currentnumber).fadeOut("slow", function(){
+            $('#' + (currentnumber - 1)).fadeOut("slow", function(){
                 console.log(score);
                 $.ajax({
                     type: "POST",
                     url: "/ethicsm/addanswer",
-                    data: {questionnumber: currentnumber, answer: te }
+                    data: {questionnumber: (currentnumber - 1), answer: te }
                 });
 
-                currentnumber = currentnumber + 1;
+
 
                 $('#' + currentnumber).fadeIn("slow").removeClass("hidden-xl-down");
                 if(currentnumber === 9){
