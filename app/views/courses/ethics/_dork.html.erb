@@ -53,7 +53,7 @@
         $('#' + currentnumber).removeClass("hidden-xl-down");
 
         $('.btn-block').on('click', function (){
-            $(".btn-block").prop("disabled", true);
+            $(".btn-block").prop("disabled", true).css("cursor", "default");
 
             setTimeout(function(){
                 $(".btn-block").prop("disabled", false);
