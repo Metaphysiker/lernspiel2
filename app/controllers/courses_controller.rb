@@ -4,6 +4,8 @@ class CoursesController < ApplicationController
     print request.format
     @request = request.format
 
+    @ethiccssclass = "jumbotron text-justify yellowish mt-3"
+
     @step = 0
     if params[:step] == nil
       @step = 0
