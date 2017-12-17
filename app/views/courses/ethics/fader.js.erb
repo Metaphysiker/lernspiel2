@@ -1,7 +1,7 @@
 $( "#fader" ).fadeOut( "slow", function() {
     // Animation complete.
     x = $("<%= escape_javascript( render "courses/ethics/" + @currentstep) %>")
-
+    $('html,body').scrollTop(0);
     $("#fader").empty().append(x).fadeIn("slow");
 
 });
