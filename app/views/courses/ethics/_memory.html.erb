@@ -21,13 +21,13 @@
   <% @memory.each do |card| %>
       <% i = i + 1 %>
       <div class="col-xs-6 col-sm-4 col-md-3">
-        <div id="<%=i%>" value="<%=card[1]%>" class="flip p-2">
+        <div id="<%=i%>" value="<%=card[1]%>" class="flip my-2">
 
-          <div class="front yellowishcard text-center cardsize p-3">
-
+          <div class="front yellowishcard text-center cardsize p-1">
+            <%= card[0] %>
           </div>
 
-          <div class="back yellowishcard text-center cardsize p-3">
+          <div class="back yellowishcard text-center cardsize p-1">
             <%= card[0] %>
           </div>
 
