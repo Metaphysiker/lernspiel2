@@ -14,13 +14,44 @@
     <b><%= @whatareyou[7][0] %></b>
   </p>
   <p>
-    Hast du geantwortet mit:
+    Hast Du geantwortet mit:
   </p>
   <p>
     <b><%= current_user.ethic.answers["7"] %></b>
   </p>
+  <% if current_user.ethic.answers["7"].include?("Nein") %>
+      <p>
+        Deine Antwort ist nicht die, die eine <b>utilitaristischen Ethik</b> empfehlen würde.
+      </p>
+    <% else %>
+      <p>
+      Deine Antwort ist die gleiche, die eine <b>utilitaristischen Ethik</b> empfehlen würde.
+      </p>
+  <% end %>
   <p>
-
+    Der Tod eines Menschen verursacht Leid und Trauer, doch der Tod von 4 Menschen verursacht
+    noch mehr Leid und Trauer und ist demnach, nach einer <b>utilitaristischen Ethik</b> schlimmer
+    als der Tod eines Menschen.
+  </p>
+  <p>
+    Kritiker argumentieren nun, dass eine solche Ethik fatale Konsequenzen hätte:
+    <i>
+    Müssten wir uns denn nicht jedes Mal fürchten, wenn wir ins Krankenhaus gehen, dass wir vielleicht geopfert werden?
+    </i>
+    Eine solche Ethik würde jegliches Vertrauen, das wir in unsere Mitmenschen haben, vernichten und jedes gesunde Zusammenleben verhindern.
+  </p>
+  <p>
+    Anhänger des Konsequentialismus' können nun auf zwei Weisen reagieren.
+    <ol>
+      <li>
+        Sie können darauf hinweisen, dass es hier schliesslich um das Leben von 4 Personen geht.
+        Das Opfer ist es wert, erbracht zu werden.
+      </li>
+      <li>
+        Sie können zugeben, dass es sich hierbei um ein Problem handelt und das eine konsequentialistische Ethik so modifiziert werden muss, dass solche Fälle nicht mehr als <b></b>
+        Kurzsichtig argumentiert
+      </li>
+    </ol>
   </p>
     
   <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
