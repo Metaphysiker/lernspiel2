@@ -1,0 +1,50 @@
+<div class="alert alert-info mt-3">
+  <strong>Aufgabe:</strong> In der vorherigen Seite wurden 3 Probleme des Konsequentialismus' genannt. Welche 3 waren das?
+</div>
+
+<% i = 0 %>
+<ul class="form-check">
+  <% @problems.each do |problem| %>
+      <li class="list-group-item">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="<%= i %>">
+          <%= problem %>
+        </label>
+
+      </li>
+      <% i = i + 1 %>
+  <% end %>
+</ul>
+
+<div class="alert alert-danger hidden-xl-down">
+  <strong>Nicht alle Antworten sind richtig!</strong> Versuche es erneut!
+</div>
+
+<div class="alert alert-success hidden-xl-down">
+  <strong>Richtig!</strong> <%= link_to "Weiter", ethics_path("dintroduction"), class: "btn btn-primary btn-md" %>
+</div>
+
+<%= link_to "Weiter", ethics_path("dintroduction"), class: "btn btn-primary btn-md hidden-xl-down" %>
+
+<button type="button" id="checkresult" class="btn btn-primary">Auswahl überprüfen</button>
+
+<script>
+    $(document).ready(function() {
+        $("#checkresult").click(function(event){
+            event.preventDefault();
+            var result = $('input:checked').map(function(){
+                return $(this).val();
+            });
+            var result = result.get();
+            console.log(result.toString() == ["2", "3", "6"].toString());
+            if(result.toString() == ["2", "3", "6"].toString()){
+                $('.alert-success').removeClass('hidden-xl-down');
+                $('.alert-danger').addClass('hidden-xl-down');
+            } else {
+                $('.alert-danger').removeClass('hidden-xl-down');
+                $('.alert-success').addClass('hidden-xl-down');
+            };
+
+        });
+    });
+</script>
