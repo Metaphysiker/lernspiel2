@@ -24,6 +24,7 @@ class CoursesController < ApplicationController
         "whichisright",
         "dcases",
         "kinstrument",
+        "tformal",
         "prot",
         "konk",
         "kond",
