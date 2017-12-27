@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="38d26ade-0e6b-4e04-8502-04dae29625bb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/courses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/courses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/ethics/_kinstrument.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/ethics/_kinstrument.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -187,8 +185,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb" />
         <option value="$PROJECT_DIR$/app/views/courses/ethics/_kinstrument.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/courses_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/courses/ethics/tformal.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/courses_controller.rb" />
       </list>
     </option>
   </component>
@@ -499,12 +497,12 @@
       <workItem from="1513459457317" duration="4526000" />
       <workItem from="1513532252509" duration="12293000" />
       <workItem from="1513590882293" duration="2644000" />
-      <workItem from="1514328105708" duration="4209000" />
+      <workItem from="1514328105708" duration="4301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194289000" />
+    <option name="totallyTimeSpent" value="194381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
