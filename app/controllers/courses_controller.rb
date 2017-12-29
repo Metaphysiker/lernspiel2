@@ -32,10 +32,22 @@ class CoursesController < ApplicationController
         "kont"
     ]
 
-    @problems = [
+    @dproblems = [
+        "Deontologische Ethiken empfehlen, dass man Straftätern helfen soll.",
+        "Deontologische Ethiken sind zu kompliziert, um befolgt zu werden.",
+        "In bestimmten Situationen kann man sich entscheiden wie man will, man macht, deontologisch gesehen, immer etwas falsch.",
+        "j",
+        "Da die Willensfreiheit eine Illusion ist, kann man sich gar nicht für eine Handlung entscheiden.",
+        "Früher oder später hat jede Handlung gute Folgen, deshalb spielt es keine Rolle, wie man sich entscheidet.",
+        "In gewissen Situationen verlangt der Konsequentialismus, dass wir lügen, stehlen oder morden sollen.",
+        "Der Konsequentialismus verlangt, dass wir vor jeder Entscheidung zu einer Wahrsagerin gehen.",
+        "Der Konsequentialismus impliziert, dass jede Ursache eine Wirkung haben muss."
+    ]
+
+    @kproblems = [
         "Der Konsequentialismus hat zu wenige Anhänger, um ernst genommen zu werden.",
         "Der Konsequentialismus behauptet, dass wir immer lügen und stehlen sollen.",
-        "Wir können die Folgen unserer Handlungen nicht immer vorhersehen oder abschätzen.",
+        "Der Konsequentialismus hat zur Folge, dass wir",
         "Der Konsequentialismus zieht Absichten und Intentionen nicht in Erwägung.",
         "Da die Willensfreiheit eine Illusion ist, kann man sich gar nicht für eine Handlung entscheiden.",
         "Früher oder später hat jede Handlung gute Folgen, deshalb spielt es keine Rolle, wie man sich entscheidet.",
