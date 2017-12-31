@@ -26,6 +26,7 @@ class CoursesController < ApplicationController
         "kinstrument",
         "tformal",
         "dwp",
+        "utgf",
         "prot",
         "konk",
         "kond",
@@ -36,6 +37,13 @@ class CoursesController < ApplicationController
         "Die Pflicht, ausgeliehene Waffen zurückzugeben.",
         "Die Pflicht, keine Waffen auszuleihen.",
         "Die Pflicht, einem Wahnsinnigen keine Waffen zu geben",
+        "Die Pflicht, Wahnsinnigen die Waffen wegzunehmen."
+    ]
+
+    @kutgf = [
+        "Die Frau hat ihre Liebe nur vorgespielt. Selbst wenn wir für 5 Monate sehr glücklich waren, war es falsch von ihr, uns die Liebe vorzuspielen.",
+        "Nur wahre Liebe macht einen glücklich",
+        "Dieses Gedankenexperiment will zeigen, dass ",
         "Die Pflicht, Wahnsinnigen die Waffen wegzunehmen."
     ]
 

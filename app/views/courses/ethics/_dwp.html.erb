@@ -2,6 +2,15 @@
   <strong>Aufgabe:</strong> Lies diesen Text durch und löse die anschliessenden Übungen!
 </div>
 
+<div id="backforward" class="card hidden-xl-down">
+  <div class="card-header">
+    <b>Übung abgeschlossen!</b>!
+  </div>
+  <div class="card-block">
+    <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
+  </div>
+</div>
+
 <div class="alert alert-warning mt-3 text-justify">
   <p>
     <strong>Sokrates: </strong>
@@ -74,7 +83,11 @@
 
         var finished = function finished(fin) {
             if(fin.includes("theory") && fin.includes("conflicts")){
-                alert ("finished!")
+                var title = 'Übungen abgeschlossen!';
+                var text = 'Du hast alle Fragen richtig beantwortet!';
+
+                resultswal(title, text, 500, "ethic", "dwp", "completed");
+                $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
             }
         };
 

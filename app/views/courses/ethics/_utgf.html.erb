@@ -1,3 +1,83 @@
+<div class="alert alert-info mt-3">
+  <strong>Aufgabe:</strong> Lies das folgende Gedankenexperiment und löse die anschliessenden Übungen!
+</div>
+
+<div class="alert alert-warning mt-3 text-justify">
+    <strong>Die "utilitaristische" Freundin</strong>
+    <br>
+    <br>
+    <p>
+    Du hast dich in eine Frau verliebt. Du gestehst deine Liebe zu ihr und du kannst es kaum fassen: Sie gesteht auch ihre Liebe zu dir!
+    Nach 5 Monaten, es war die schönste Zeit deines Lebens, bricht sie die Beziehung plötzlich ab. Du fragst sie, was denn geschehen sei.
+    Sie antwortet: "Ich war nie in dich verliebt. Ich dachte nur, dass wir beide wahrscheinlich glücklicher sind, wenn wir in einer Beziehung sind,
+    als wenn wir in keiner Beziehung sind. Und wir waren doch 5 Monate lang glücklich, nicht wahr? Doch jetzt habe ich mich in einen anderen Mann verliebt
+    und ich möchte nun mit ihm leben. Klar, du wirst jetzt vielleicht ein bisschen traurig sein, aber trotzdem warst du 5 Monate glücklich, in denen du
+    ohne Beziehung nicht glücklich gewesen wärst."
+  </p>
+  <p>
+   <i>Hat die "utilitaristische" Freundin richtig gehandelt?</i>
+  </p>
+  <footer class="blockquote-footer">Beispiel genommen von <cite title="Source Title">The 21st Century Monads- Utilitarian Girlfriend</cite></footer>
+</div>
+
+<div class="alert alert-info mt-3">
+  <strong>1. Übung: </strong> Überlege dir, was ein Kritiker des Utilitarismus' hierzu sagen würde. Füll diesen Lückentext aus!
+</div>
+
+<div class="alert alert-warning mt-3 text-justify">
+  <p style="line-height: 250% !important;">
+    <select>
+      <option value="0">Auswählen</option>
+      <option value="1">Dieses Gedankenexperiment</option>
+      <option value="2">Dieser Tatsachenbericht</option>
+    </select>
+    zeigt die Unplausibiltät des Utilitarismus'.
+    Der Utilitarismus empfiehlt, sich für die Handlung zu entscheiden, die am meisten
+    <select>
+      <option value="no">Auswählen</option>
+      <option value="Glück">Glück</option>
+      <option value="Leid">Leid</option>
+      <option value="Spass">Spass</option>
+      <option value="Langeweile">Langeweile</option>
+    </select>
+    und am wenigsten
+  <select>
+    <option value="no">Auswählen</option>
+    <option value="Glück">Glück</option>
+    <option value="Leid">Leid</option>
+    <option value="Spass">Spass</option>
+    <option value="Langeweile">Langeweile</option>
+  </select>
+    produziert.
+    Die "utilitaristische Freundin" hat nach
+    <select>
+      <option value="0">Auswählen</option>
+      <option value="1">dem Utilitarismus</option>
+      <option value="2">der Tugendethik</option>
+      <option value="3">der Deontologie</option>
+    </select>
+    <b>richtig</b> gehandelt,
+    doch niemand würde sich ernsthaft eine solche Freundin wünschen.
+    Niemand will, dass man ihm eine Liebe vorspielt,
+    doch nach dem Utilitarismus müssten wir die "utilitaristische" Freundin sogar <b>loben</b>.
+    Ist es nicht absurd, eine Person zu loben, die uns absichtlich getäuscht hat?
+  </p>
+</div>
+
+<% i = 0 %>
+<ul class="form-check">
+  <% @kutgf.each do |problem| %>
+      <li class="list-group-item">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="conflicts" value="<%= i %>">
+          <%= problem %>
+        </label>
+      </li>
+      <% i = i + 1 %>
+  <% end %>
+</ul>
+
+
 <div class="<%=@ethiccssclass%>">
   <h1>Die "utilitaristische" Freundin</h1>
   <br>
