@@ -57,7 +57,7 @@
 </ul>
 
 <div class="alert alert-danger hidden-xl-down" id="falsch2">
-  <strong>Nicht alle Antworten sind richtig!</strong> Versuche es erneut!
+  <strong>Falsch</strong> Versuche es erneut!
 </div>
 
 <div class="alert alert-success hidden-xl-down"  id="richtig2">
@@ -92,7 +92,8 @@
                 return $(this).val();
             });
             var result = result.get();
-            if(result.toString() == ["0", "2"].toString()){
+            console.log(result);
+            if(result.toString() == ["0"].toString()){
                 $('#richtig2').removeClass('hidden-xl-down');
                 $('#falsch2').addClass('hidden-xl-down');
             } else {
