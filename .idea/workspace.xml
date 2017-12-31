@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38d26ade-0e6b-4e04-8502-04dae29625bb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/ethics/_dwp.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/ethics/_dwp.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -81,8 +82,8 @@
       <file leaf-file-name="_dwp.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_dwp.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="93" lean-forward="true" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
+            <state relative-caret-position="260">
+              <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -198,7 +199,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="771" />
-    <option name="y" value="350" />
     <option name="width" value="1153" />
     <option name="height" value="1052" />
   </component>
@@ -498,12 +498,12 @@
       <workItem from="1513532252509" duration="12293000" />
       <workItem from="1513590882293" duration="2644000" />
       <workItem from="1514328105708" duration="4209000" />
-      <workItem from="1514580732969" duration="20560000" />
+      <workItem from="1514580732969" duration="23471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222804000" />
+    <option name="totallyTimeSpent" value="225715000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,7 +515,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="771" y="350" width="1153" height="1052" extended-state="0" />
+    <frame x="771" y="0" width="1153" height="1052" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23748863" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -915,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_dwp.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="93" lean-forward="true" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
+        <state relative-caret-position="260">
+          <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
           <folding />
         </state>
       </provider>
