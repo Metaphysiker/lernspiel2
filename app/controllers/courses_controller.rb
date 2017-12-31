@@ -25,18 +25,31 @@ class CoursesController < ApplicationController
         "dcases",
         "kinstrument",
         "tformal",
-        "kwp",
+        "dwp",
         "prot",
         "konk",
         "kond",
         "kont"
     ]
 
+    @dconflicts = [
+        "Die Pflicht, ausgeliehene Waffen zurückzugeben.",
+        "Die Pflicht, keine Waffen auszuleihen.",
+        "Die Pflicht, einem Wahnsinnigen keine Waffen zu geben",
+        "Die Pflicht, Wahnsinnigen die Waffen wegzunehmen."
+    ]
+
+    @ethicaltheories = [
+        "Deontologie",
+        "Konsequentialismus",
+        "Tugendethik"
+    ]
+
     @dproblems = [
         "Deontologische Ethiken sind zu kompliziert, um befolgt zu werden.",
-        "In bestimmten Situationen kann man sich entscheiden wie man will, man macht, deontologisch gesehen, immer etwas falsch.",
+        "In gewissen Situationen kann man sich entscheiden wie man will, man macht, deontologisch gesehen, immer etwas falsch.",
         "Gewisse Handlungen, die deontologisch gut sind, führen möglicherweise zu Handlungen, die deontologisch schlecht sind.",
-        "k"
+        "d"
     ]
 
     @kproblems = [

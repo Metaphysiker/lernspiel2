@@ -1,10 +1,22 @@
 <div class="alert alert-info mt-3">
-  <strong>Aufgabe:</strong> In den vorherigen Seiten wurden Probleme für eine deontologische Ethik genannt. Welche 2 waren das?
+  <strong>Aufgabe:</strong> Lies diesen Text durch und löse die anschliessenden Übungen!
+</div>
+
+<div class="alert alert-warning mt-3 text-justify">
+  <p>
+    <strong>Sokrates: </strong>
+    "Ich meine z.B. einen Fall wie folgenden: Wenn jemand bei gesundem Verstande einem Freunde Waffen übergäbe und im Zustande des Wahnsinns sie zurückforderte, so wird wohl jedermann sagen, daß man weder zur Zurückgabe von dergleichen verpflichtet sei, noch der Zurückgebende gerecht wäre noch auch einer, der einem Menschen von diesem Zustande die volle Wahrheit sagen wollte."
+  </p>
+  <footer class="blockquote-footer">Aus <cite title="Source Title">Platons Staat, 1. Buch</cite></footer>
+</div>
+
+<div class="alert alert-info mt-3">
+  <strong>1. Übung:</strong> Sokrates weist auf einen Konflikt zweier Pflichten hin. Welche zwei Pflichten konfligieren?
 </div>
 
 <% i = 0 %>
 <ul class="form-check">
-  <% @dproblems.each do |problem| %>
+  <% @dconflicts.each do |problem| %>
       <li class="list-group-item">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" value="<%= i %>">
@@ -16,17 +28,45 @@
   <% end %>
 </ul>
 
-<div class="alert alert-danger hidden-xl-down">
+<div class="alert alert-danger hidden-xl-down" id="falsch1">
+  <strong>Falsch!</strong> Versuche es erneut!
+</div>
+
+<div class="alert alert-success hidden-xl-down" id="richtig1">
+  <strong>Richtig!</strong>
+</div>
+
+<button type="button" id="checkresult" class="btn btn-primary">Auswahl überprüfen</button>
+
+<div class="alert alert-info mt-3">
+  <strong>2. Übung:</strong> Für welche Ethik stellt dieser Konflikt ein mögliches Problem dar?
+</div>
+
+<% i = 0 %>
+<ul class="form-check">
+  <% @ethicaltheories.each do |problem| %>
+      <li class="list-group-item">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="ethicaltheories" value="<%= i %>">
+          <%= problem %>
+        </label>
+
+      </li>
+      <% i = i + 1 %>
+  <% end %>
+</ul>
+
+<div class="alert alert-danger hidden-xl-down" id="falsch2">
   <strong>Nicht alle Antworten sind richtig!</strong> Versuche es erneut!
 </div>
 
-<div class="alert alert-success hidden-xl-down">
+<div class="alert alert-success hidden-xl-down"  id="richtig2">
   <strong>Richtig!</strong> <%= link_to "Weiter", ethics_path("dintroduction"), class: "btn btn-primary btn-md" %>
 </div>
 
 <%= link_to "Weiter", ethics_path("dintroduction"), class: "btn btn-primary btn-md hidden-xl-down" %>
 
-<button type="button" id="checkresult" class="btn btn-primary">Auswahl überprüfen</button>
+<button type="button" id="checkresult2" class="btn btn-primary">Auswahl überprüfen</button>
 
 <script>
     $(document).ready(function() {
@@ -36,15 +76,31 @@
                 return $(this).val();
             });
             var result = result.get();
-            console.log(result.toString() == ["2", "3", "6"].toString());
-            if(result.toString() == ["2", "3", "6"].toString()){
-                $('.alert-success').removeClass('hidden-xl-down');
-                $('.alert-danger').addClass('hidden-xl-down');
+            if(result.toString() == ["0", "2"].toString()){
+                $('#richtig1').removeClass('hidden-xl-down');
+                $('#falsch1').addClass('hidden-xl-down');
             } else {
-                $('.alert-danger').removeClass('hidden-xl-down');
-                $('.alert-success').addClass('hidden-xl-down');
+                $('#falsch1').removeClass('hidden-xl-down');
+                $('#richtig1').addClass('hidden-xl-down');
             };
 
         });
+
+        $("#checkresult2").click(function(event){
+            event.preventDefault();
+            var result = $('input:checked').map(function(){
+                return $(this).val();
+            });
+            var result = result.get();
+            if(result.toString() == ["0", "2"].toString()){
+                $('#richtig2').removeClass('hidden-xl-down');
+                $('#falsch2').addClass('hidden-xl-down');
+            } else {
+                $('#falsch2').removeClass('hidden-xl-down');
+                $('#richtig2').addClass('hidden-xl-down');
+            };
+
+        });
+
     });
 </script>
