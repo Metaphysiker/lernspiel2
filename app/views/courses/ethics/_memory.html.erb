@@ -36,3 +36,63 @@
   <% end %>
 
 </div>
+
+<script>
+    $(document).ready(function() {
+        var flippedcard1 = 0;
+        var flippedcard2 = 0;
+        var score = 0;
+
+        $('.flip').on('click', function (){
+            var currentcard = $(this).attr("id");
+
+            console.log(flippedcard1 + " | " + flippedcard2);
+
+            if((flippedcard1 > 0) && (flippedcard2 > 0)){
+                $('#' + flippedcard1).flip(false);
+                $('#' + flippedcard2).flip(false);
+                flippedcard1 = 0;
+                flippedcard2 = 0;
+
+            }  else if($('#' + currentcard).children().hasClass('greenishcard')){
+                console.log("nothing should happen");
+            } else if((flippedcard1 > 0) && (flippedcard1 !== currentcard)) {
+                $('#' + currentcard).flip('toggle');
+                if ($('#' + currentcard).attr("value") === $('#' + flippedcard1).attr("value")) {
+
+                    $('#' + currentcard).removeClass('flip');
+                    $('#' + flippedcard1).removeClass('flip');
+
+                    $('#' + currentcard).children().removeClass('yellowishcard').addClass('greenishcard');
+                    $('#' + flippedcard1).children().removeClass('yellowishcard').addClass('greenishcard');
+
+                    flippedcard1 = 0;
+                    score = score + 1;
+
+                    if(score === 6){
+                        var title = 'Memory abgeschlossen!';
+                        var text = 'Du hast alle Paare gefunden!';
+
+                        resultswal(title, text, 500, "ethic", "memory", "completed");
+                        $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
+                    }
+
+                } else {
+                    flippedcard2 = currentcard;
+                }
+            } else if(flippedcard1 === currentcard){
+                $('#' + currentcard).flip('toggle');
+                flippedcard1 = 0;
+            } else {
+                $('#' + currentcard).flip('toggle');
+              flippedcard1 = $(this).attr("id");
+            }
+        });
+
+
+        $(".flip").flip({
+            trigger: 'manual'
+        });
+
+    });
+</script>

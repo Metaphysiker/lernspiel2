@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38d26ade-0e6b-4e04-8502-04dae29625bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -22,7 +22,7 @@
       <file leaf-file-name="courses_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/courses_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
+            <state relative-caret-position="411">
               <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
               <folding />
             </state>
@@ -42,8 +42,8 @@
       <file leaf-file-name="_utgf.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="93" column="7" lean-forward="false" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
+            <state relative-caret-position="278">
+              <caret line="132" column="12" lean-forward="true" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#3;n#!!top" expanded="true" />
               </folding>
@@ -94,8 +94,8 @@
       <file leaf-file-name="_memory.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="224">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -200,8 +200,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="802" />
-    <option name="y" value="58" />
+    <option name="x" value="756" />
+    <option name="y" value="279" />
     <option name="width" value="1101" />
     <option name="height" value="1052" />
   </component>
@@ -510,12 +510,12 @@
       <workItem from="1514328105708" duration="4209000" />
       <workItem from="1514580732969" duration="49146000" />
       <workItem from="1514761964115" duration="7773000" />
-      <workItem from="1514802858733" duration="27770000" />
+      <workItem from="1514802858733" duration="28838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286933000" />
+    <option name="totallyTimeSpent" value="288001000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,7 +527,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="802" y="58" width="1101" height="1052" extended-state="0" />
+    <frame x="756" y="279" width="1101" height="1052" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21107927" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -875,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/courses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_introduction.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -917,16 +909,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state relative-caret-position="224">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/courses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="93" column="7" lean-forward="false" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
+        <state relative-caret-position="278">
+          <caret line="132" column="12" lean-forward="true" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#3;n#!!top" expanded="true" />
           </folding>

@@ -111,20 +111,22 @@
 
 <script>
     $(document).ready(function() {
+        var points = 0;
         $( function() {
             $( ".draggable" ).draggable({ revert: 'invalid', snap: ".dropfield", snapTolerance: 75, snapMode: "inner" });
 
             $( ".dropfield" ).droppable({
                 drop: function( event, ui ) {
-                    console.log(1);
-                    console.log($(this).attr('value'));
-                    console.log(2);
-                    console.log(ui.draggable.attr('id'));
-                    console.log(ui.draggable.attr('id') == $(this).attr('value'));
                   if(ui.draggable.attr('id').toLowerCase() == $(this).attr('value')){
+                      points = points + 1;
+                      console.log(points);
                       var id = ui.draggable.attr('id');
                       $("#" + id).draggable( 'disable' );
                       $("#" + id).css( "background-color", "#7FFF00");
+                      if (points == 5){
+                          resultswal("Lückentext ausgefüllt", "Du hast die Lücken korrekt ausgefüllt.", 500, "ethic", "utgf", "completed");
+                          $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
+                      }
                   }
                 }
             });
