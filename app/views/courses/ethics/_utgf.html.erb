@@ -63,13 +63,6 @@
   </p>
 </div>
 
-<style>
-  #droppable {}
-  .dropfield { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px;}
-  .dropling { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px; background-color: white;}
-</style>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <div id="liebe" class="dropling draggable text-center">
   Liebe
@@ -111,6 +104,11 @@
 
 <script>
     $(document).ready(function() {
+
+        var callresultswal = function(){
+            resultswal("Lückentext ausgefüllt", "Du hast die Lücken korrekt ausgefüllt.", 500, "ethic", "utgf", "completed");
+        };
+
         var points = 0;
         $( function() {
             $( ".draggable" ).draggable({ revert: 'invalid', snap: ".dropfield", snapTolerance: 75, snapMode: "inner" });
@@ -124,7 +122,7 @@
                       $("#" + id).draggable( 'disable' );
                       $("#" + id).css( "background-color", "#7FFF00");
                       if (points == 5){
-                          resultswal("Lückentext ausgefüllt", "Du hast die Lücken korrekt ausgefüllt.", 500, "ethic", "utgf", "completed");
+                          callresultswal();
                           $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
                       }
                   }

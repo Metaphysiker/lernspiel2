@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
@@ -133,3 +134,6 @@ h5 {
     padding: 10px;
     border: 1px solid #aaaaaa;
 }
+
+.dropfield { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px;}
+.dropling { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px; background-color: white;}
