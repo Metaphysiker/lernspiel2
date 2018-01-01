@@ -25,57 +25,88 @@
 </div>
 
 <div class="alert alert-warning mt-3 text-justify">
-  <p style="line-height: 250% !important;">
-    Die Frau hat dir ihre Liebe nur <b>vorgespielt</b>. Sie hat dich <b>absichtlich getäuscht</b>.
+  <p style="line-height: 2; !important; display: inline;">
+    "Die Frau hat dir ihre
+  <span id="jesus" class="dropfield" value="liebe">
+
+    </span>
+
+    nur <b>vorgespielt</b>. Sie hat dich
+    <span class="dropfield" value="absichtlich">
+
+    </span>
+    getäuscht.
     Du glaubtest, die <b>Liebe deines Lebens</b> gefunden zu haben, dabei war die Liebe von Anfang an nur einseitig und zum Scheitern verurteilt.
     Ist es nicht <b>falsch</b>, was diese Frau mit dir gemacht hat?
-  </p>
-
-  <p style="line-height: 250% !important; display: inline;">
     Doch nach dem
-    <div id="droppable" class="dropfield">
+    <span class="dropfield" value="utilitarismus">
 
-    </div>
-    Utilitarismus hat die Frau nicht falsch gehandelt. Im Gegenteil, nach dem Utilitarismus hat sie sogar <b>gut gehandelt</b>.
+    </span>
+    hat die Frau nicht falsch gehandelt. Im Gegenteil, nach dem Utilitarismus hat sie sogar <b>gut gehandelt</b>.
     Mehr noch: Nach dem Utilitarismus <b>sollten wir alle so wie die Frau handeln</b>, weil auf diese Weise <b>mehr Glück entstanden ist</b>,
-    als wenn wir nicht so gehandelt hätten. Diese Schlussfolgerung ist absurd: Es kann doch nicht sein, dass es gut ist, uns gegenseitig absichtlich zu täuschen.
+    als wenn wir nicht so gehandelt hätten. Diese Schlussfolgerung ist
+    <span class="dropfield" value="absurd">
+
+    </span>
+    : Es kann doch nicht sein, dass es gut ist, uns gegenseitig absichtlich zu täuschen."
   </p>
 </div>
 
 <style>
   #droppable {}
-  .dropfield { border: 2px solid darkgrey; padding: 1px; border-radius: 5px; display: inline-block; width: 100px; height: 25px;}
-  .dropling { border: 2px solid darkgrey; padding: 1px; border-radius: 5px; display: inline-block; width: 100px; height: 25px; background-color: white;}
+  .dropfield { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px;}
+  .dropling { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px; background-color: white;}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
-<div id="draggable" class="dropling text-center">
-  True one!
+<div id="liebe" class="dropling draggable text-center">
+  Liebe
 </div>
 
-<div id="draggable2" class="dropling text-center">
- Bad one!
+<div id="utilitarismus" class="dropling draggable text-center">
+  Utilitarismus
+</div>
+
+<div id="absurd" class="dropling draggable text-center">
+  absurd
+</div>
+<div id="absichtlich" class="dropling draggable text-center">
+  absichtlich
+</div>
+<br>
+<br>
+
+<div class="dropfield">
+
+</div>
+
+<div class="dropfield">
+
+</div>
+
+<div class="dropfield">
+
 </div>
 
 
 <script>
     $(document).ready(function() {
         $( function() {
-            $( "#draggable" ).draggable({ revert: "valid" });
-            $( "#draggable2" ).draggable({ revert: "invalid", snap: ".dropfield", snapMode: "inner" });
+            $( ".draggable" ).draggable({ revert: 'invalid', snap: ".dropfield" });
 
-            $( "#droppable" ).droppable({
-                classes: {
-                    "ui-droppable-active": "ui-state-active",
-                    "ui-droppable-hover": "ui-state-hover"
-                },
+            $( ".dropfield" ).droppable({
                 drop: function( event, ui ) {
-                    $( this )
-                        .addClass( "ui-state-highlight" )
-                        .find( "p" )
-                        .html( "Dropped!" );
+                    console.log(1);
+                    console.log($(this).attr('value'));
+                    console.log(2);
+                    console.log(ui.draggable.attr('id'));
+                    console.log(ui.draggable.attr('id') == $(this).attr('value'));
+                  if(ui.draggable.attr('id').toLowerCase() == $(this).attr('value')){
+                      var id = ui.draggable.attr('id');
+                      $("#" + id).draggable( 'disable' );
+                      $("#" + id).css( "background-color", "#7FFF00");
+                  }
                 }
             });
         } );
