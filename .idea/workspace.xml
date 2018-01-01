@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="38d26ade-0e6b-4e04-8502-04dae29625bb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/ethics/_memory.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -44,13 +42,11 @@
       <file leaf-file-name="_utgf.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="142">
+              <caret line="66" column="98" lean-forward="false" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
               <folding>
+                <element signature="n#style#0;n#p#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -204,10 +200,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="861" />
-    <option name="y" value="105" />
-    <option name="width" value="1063" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="809" />
+    <option name="width" value="1101" />
     <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -515,12 +510,12 @@
       <workItem from="1514328105708" duration="4209000" />
       <workItem from="1514580732969" duration="49146000" />
       <workItem from="1514761964115" duration="7773000" />
-      <workItem from="1514802858733" duration="5946000" />
+      <workItem from="1514802858733" duration="9654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265109000" />
+    <option name="totallyTimeSpent" value="268817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -532,10 +527,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="861" y="105" width="1063" height="1052" extended-state="0" />
-    <editor active="true" />
+    <frame x="809" y="0" width="1101" height="1052" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21902874" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21107927" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288835" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -930,13 +924,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/courses/ethics/_utgf.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="142">
+          <caret line="66" column="98" lean-forward="false" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
           <folding>
+            <element signature="n#style#0;n#p#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

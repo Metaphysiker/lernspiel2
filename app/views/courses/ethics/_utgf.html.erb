@@ -33,8 +33,8 @@
 
   <p style="line-height: 250% !important; display: inline;">
     Doch nach dem
-    <div id="droppable" style="background-color: red; display: inline;">
-      Drop me here
+    <div id="droppable" class="dropfield">
+
     </div>
     Utilitarismus hat die Frau nicht falsch gehandelt. Im Gegenteil, nach dem Utilitarismus hat sie sogar <b>gut gehandelt</b>.
     Mehr noch: Nach dem Utilitarismus <b>sollten wir alle so wie die Frau handeln</b>, weil auf diese Weise <b>mehr Glück entstanden ist</b>,
@@ -43,28 +43,28 @@
 </div>
 
 <style>
-  #draggable, #draggable2 { width: 100px; height: 25px;}
-  #droppable { width: 100px; height: 25px;}
+  #droppable {}
+  .dropfield { border: 2px solid darkgrey; padding: 1px; border-radius: 5px; display: inline-block; width: 100px; height: 25px;}
+  .dropling { border: 2px solid darkgrey; padding: 1px; border-radius: 5px; display: inline-block; width: 100px; height: 25px; background-color: white;}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-<div id="draggable" class="ui-widget-content" style="background-color: red;">
-  <p>I revert when I'm dropped</p>
+<div id="draggable" class="dropling text-center">
+  True one!
 </div>
 
-<div id="draggable2" class="ui-widget-content" style="background-color: red;">
-  <p>I revert when I'm not dropped</p>
+<div id="draggable2" class="dropling text-center">
+ Bad one!
 </div>
-
 
 
 <script>
     $(document).ready(function() {
         $( function() {
             $( "#draggable" ).draggable({ revert: "valid" });
-            $( "#draggable2" ).draggable({ revert: "invalid" });
+            $( "#draggable2" ).draggable({ revert: "invalid", snap: ".dropfield", snapMode: "inner" });
 
             $( "#droppable" ).droppable({
                 classes: {
