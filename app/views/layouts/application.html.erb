@@ -78,8 +78,13 @@
   <div style="margin-top: 80px;"></div>
 
   <div class=" text-center fixed-bottom grey-bg mt-2 p-2">
-    <%= link_to root_path do %>
-        <div class="navbar-brand"><%= image_tag("logo.png", height: '30') %></div>
+
+    <% if user_signed_in? %>
+          <div class="navbar-brand">Punkte: <span class="counter"><%= current_user.points %></span></div>
+    <% else %>
+        <%= link_to root_path do %>
+            <div class="navbar-brand"><%= image_tag("logo.png", height: '30') %></div>
+        <% end %>
     <% end %>
   </div>
 
