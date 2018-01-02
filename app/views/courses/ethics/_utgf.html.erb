@@ -1,8 +1,12 @@
-<div class="<%=@ethiccssclass%>">
-  <h1>Die "utilitaristische" Freundin</h1>
-  <br>
-  <h3>Das Gedankenexperiment</h3>
-  <p>
+<div class="alert alert-info mt-3">
+  <strong>Aufgabe:</strong> Lies das folgende Gedankenexperiment und löse die anschliessenden Übungen!
+</div>
+
+<div class="alert alert-warning mt-3 text-justify">
+    <strong>Die "utilitaristische" Freundin</strong>
+    <br>
+    <br>
+    <p>
     Du hast dich in eine Frau verliebt. Du gestehst deine Liebe zu ihr und du kannst es kaum fassen: Sie gesteht auch ihre Liebe zu dir!
     Nach 5 Monaten, es war die schönste Zeit deines Lebens, bricht sie die Beziehung plötzlich ab. Du fragst sie, was denn geschehen sei.
     Sie antwortet: "Ich war nie in dich verliebt. Ich dachte nur, dass wir beide wahrscheinlich glücklicher sind, wenn wir in einer Beziehung sind,
@@ -10,37 +14,120 @@
     und ich möchte nun mit ihm leben. Klar, du wirst jetzt vielleicht ein bisschen traurig sein, aber trotzdem warst du 5 Monate glücklich, in denen du
     ohne Beziehung nicht glücklich gewesen wärst."
   </p>
-  <h3>Die darin enthaltene Kritik am Utilitarismus</h3>
   <p>
-   Dieses Gedankenexperiment richtet sich gegen den Utilitarismus. Es versucht zu zeigen, dass der Utilitarismus eine <b>unintuitive</b> Position ist.
+   <i>Hat die "utilitaristische" Freundin gut gehandelt?</i>
   </p>
-  <p>
-    Worin besteht die Absurdität?
-  </p>
-  <p>
-    Die Frau hat dir ihre Liebe nur <b>vorgespielt</b>. Sie hat dich <b>absichtlich getäuscht</b>.
-    Du glaubtest, die <b>Liebe deines Lebens</b> gefunden zu haben, dabei war die Liebe von Anfang an nur einseitig und zum Scheitern verurteilt.
+  <footer class="blockquote-footer">Beispiel genommen von <cite title="Source Title">The 21st Century Monads- Utilitarian Girlfriend</cite></footer>
+</div>
+
+<div class="alert alert-info mt-3">
+  <strong>1. Übung: </strong> Überlege dir, was ein Kritiker des Utilitarismus' hierzu sagen würde. Füll diesen Lückentext aus!
+</div>
+
+<div class="alert alert-warning mt-3 text-justify">
+  <p style="line-height: 3.5; !important; display: inline;">
+    "Die Frau hat dir ihre
+  <span id="jesus" class="dropfield" value="liebe">
+
+    </span>
+
+    nur <b>vorgespielt</b>. Sie hat dich
+    <span class="dropfield" value="absichtlich">
+
+    </span>
+    getäuscht.
+    Du glaubtest, die <b>Liebe deines Lebens</b> gefunden zu haben, dabei war die Liebe von Anfang an nur einseitig und zum
+
+
+    <span class="dropfield" value="scheitern">
+
+    </span>
+
+    verurteilt.
     Ist es nicht <b>falsch</b>, was diese Frau mit dir gemacht hat?
-  </p>
-  <p>
-    Doch nach dem Utilitarismus hat die Frau nicht falsch gehandelt. Im Gegenteil, nach dem Utilitarismus hat sie sogar <b>gut gehandelt</b>.
-    Mehr noch: Nach dem Utilitarismus <b>sollten wir alle so wie die Frau handeln</b>, weil auf diese Weise <b>mehr Glück entstanden ist</b>,
-    als wenn wir nicht so gehandelt hätten. Diese Schlussfolgerung ist für einige Kritiker des Utilitarismus' unintuitiv, wenn nicht sogar absurd:
-    Es kann doch nicht sein, dass es gut ist, uns gegenseitig absichtlich zu täuschen.
-  </p>
-  <h3>Offene Frage</h3>
-  <p>
-    Wie misst man eigentlich Glück und Leid? Und wie wägt man sie gegeneinander ab? Im Gedankenexperiment heisst es, dass man "5 Monate glücklich war".
-    Doch zweifellos gibt es auch, wie der Frau selber bewusst ist, einen Schmerz der Trennung. Die Frau geht davon aus, dass der Schmerz dieser Trennung
-    durch das Glück wieder aufgewogen wird.
+    Doch nach dem
+    <span class="dropfield" value="utilitarismus">
 
-    Vielleicht ist der Schmerz der Trennung und das Wissen, dass alles nur vorgespielt wird, viel schlimmer, als die 5 Monate Glück.
+    </span>
+    hat die Frau nicht falsch gehandelt. Im Gegenteil, nach dem Utilitarismus hat sie sogar <b>gut gehandelt</b>.
+    Mehr noch: Nach dem Utilitarismus <b>sollten wir alle so wie die Frau handeln</b>, weil auf diese Weise mehr
+    <span class="dropfield" value="gluck">
+
+    </span>
+    entstanden ist,
+    als wenn wir nicht so gehandelt hätten. Diese Schlussfolgerung ist
+    <span class="dropfield" value="absurd">
+
+    </span>
+    : Es kann doch nicht sein, dass es gut ist, uns gegenseitig absichtlich zu täuschen."
   </p>
+</div>
 
-  <p>Liebe vortäuschen? Ist der Schmerz der Trennung nicht stärker als 5 Monate Glück?</p>
 
-  <%= render "courses/ethics/backforwardbutton", locals: {step: @step} %>
+<div id="liebe" class="dropling draggable text-center">
+  Liebe
+</div>
+
+<div id="utilitarismus" class="dropling draggable text-center">
+  Utilitarismus
+</div>
+
+<div id="absurd" class="dropling draggable text-center">
+  absurd
+</div>
+<div id="absichtlich" class="dropling draggable text-center">
+  absichtlich
+</div>
+
+<div id="scheitern" class="dropling draggable text-center">
+  Scheitern
+</div>
+
+<div id="gluck" class="dropling draggable text-center">
+  Glück
+</div>
+<br>
+<br>
+
+<div class="dropfield">
 
 </div>
 
-Im Gedankenexperiment geht es darum, zu zeigen, dass utilitaristische Freundinnen die besten aller Freundinnen sind.
+<div class="dropfield">
+
+</div>
+
+<div class="dropfield">
+
+</div>
+
+
+<script>
+    $(document).ready(function() {
+
+        var callresultswal = function(){
+            resultswal("Lückentext ausgefüllt!", "Du hast die Lücken korrekt ausgefüllt!", 500, "ethic", "utgf", "completed");
+        };
+
+        var points = 0;
+        $( function() {
+            $( ".draggable" ).draggable({ revert: 'invalid', snap: ".dropfield", snapTolerance: 75, snapMode: "inner" });
+
+            $( ".dropfield" ).droppable({
+                drop: function( event, ui ) {
+                  if(ui.draggable.attr('id').toLowerCase() == $(this).attr('value')){
+                      points = points + 1;
+                      console.log(points);
+                      var id = ui.draggable.attr('id');
+                      $("#" + id).draggable( 'disable' );
+                      $("#" + id).css( "background-color", "#7FFF00");
+                      if (points == 6){
+                          callresultswal();
+                          $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
+                      }
+                  }
+                }
+            });
+        } );
+    });
+</script>

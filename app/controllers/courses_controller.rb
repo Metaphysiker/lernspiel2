@@ -25,10 +25,51 @@ class CoursesController < ApplicationController
         "dcases",
         "kinstrument",
         "tformal",
+        "dwp",
+        "utgf",
         "prot",
         "konk",
         "kond",
         "kont"
+    ]
+
+    @dconflicts = [
+        "Die Pflicht, ausgeliehene Waffen zurückzugeben.",
+        "Die Pflicht, keine Waffen auszuleihen.",
+        "Die Pflicht, einem Wahnsinnigen keine Waffen zu geben",
+        "Die Pflicht, Wahnsinnigen die Waffen wegzunehmen."
+    ]
+
+    @kutgf = [
+        "Die Frau hat ihre Liebe nur vorgespielt. Selbst wenn wir für 5 Monate sehr glücklich waren, war es falsch von ihr, uns die Liebe vorzuspielen.",
+        "Nur wahre Liebe macht einen glücklich",
+        "Dieses Gedankenexperiment will zeigen, dass ",
+        "Die Pflicht, Wahnsinnigen die Waffen wegzunehmen."
+    ]
+
+    @ethicaltheories = [
+        "Deontologie",
+        "Konsequentialismus",
+        "Tugendethik"
+    ]
+
+    @dproblems = [
+        "Deontologische Ethiken sind zu kompliziert, um befolgt zu werden.",
+        "In gewissen Situationen kann man sich entscheiden wie man will, man macht, deontologisch gesehen, immer etwas falsch.",
+        "Gewisse Handlungen, die deontologisch gut sind, führen möglicherweise zu Handlungen, die deontologisch schlecht sind.",
+        "d"
+    ]
+
+    @kproblems = [
+        "Der Konsequentialismus hat zu wenige Anhänger, um ernst genommen zu werden.",
+        "Der Konsequentialismus behauptet, dass wir immer lügen und stehlen sollen.",
+        "Der Konsequentialismus hat zur Folge, dass wir",
+        "Der Konsequentialismus zieht Absichten und Intentionen nicht in Erwägung.",
+        "Da die Willensfreiheit eine Illusion ist, kann man sich gar nicht für eine Handlung entscheiden.",
+        "Früher oder später hat jede Handlung gute Folgen, deshalb spielt es keine Rolle, wie man sich entscheidet.",
+        "In gewissen Situationen verlangt der Konsequentialismus, dass wir lügen, stehlen oder morden sollen.",
+        "Der Konsequentialismus verlangt, dass wir vor jeder Entscheidung zu einer Wahrsagerin gehen.",
+        "Der Konsequentialismus impliziert, dass jede Ursache eine Wirkung haben muss."
     ]
 
     @currentstep = @order[@step]
