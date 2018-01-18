@@ -27,7 +27,7 @@
 <div class="alert alert-warning mt-3 text-justify">
   <p style="line-height: 3.5; !important; display: inline;">
     "Die Frau hat dir ihre
-  <span id="jesus" class="dropfield" value="liebe">
+  <span class="dropfield" value="liebe">
 
     </span>
 
@@ -63,6 +63,11 @@
   </p>
 </div>
 
+<span class="dropfield" value="empty">
+<div id="gluck" class="dropling draggable text-center">
+  Glück
+</div>
+</span>
 
 <div id="liebe" class="dropling draggable text-center">
   Liebe
@@ -83,25 +88,6 @@
   Scheitern
 </div>
 
-<div id="gluck" class="dropling draggable text-center">
-  Glück
-</div>
-<br>
-<br>
-
-<div class="dropfield">
-
-</div>
-
-<div class="dropfield">
-
-</div>
-
-<div class="dropfield">
-
-</div>
-
-
 <script>
     $(document).ready(function() {
 
@@ -110,24 +96,39 @@
         };
 
         var points = 0;
-        $( function() {
-            $( ".draggable" ).draggable({ revert: 'invalid', snap: ".dropfield", snapTolerance: 75, snapMode: "inner" });
 
-            $( ".dropfield" ).droppable({
-                drop: function( event, ui ) {
-                  if(ui.draggable.attr('id').toLowerCase() == $(this).attr('value')){
-                      points = points + 1;
-                      console.log(points);
-                      var id = ui.draggable.attr('id');
-                      $("#" + id).draggable( 'disable' );
-                      $("#" + id).css( "background-color", "#7FFF00");
-                      if (points == 6){
-                          callresultswal();
-                          $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
-                      }
-                  }
+        $( ".draggable" ).draggable({ revert: 'invalid', snap: ".dropfield", snapTolerance: 30, snapMode: "inner"});
+
+        $( ".dropfield" ).droppable({
+            accept: function ( event, ui) {
+                var value = $(this).attr('value');
+                if ($('.dropling[data-occupier="' + value + '"]').length == 1){
+                    return false;
+            } else {
+                    return true;
                 }
-            });
-        } );
+            },
+            drop: function( event, ui ) {
+                var id = ui.draggable.attr('id');
+                var value = $(this).attr('value');
+
+                console.log(ui.draggable.attr('data-occupier'));
+                $("#" + id).attr('data-occupier', value);
+                console.log(ui.draggable.attr('data-occupier'));
+
+                if(id.toLowerCase() == value){
+                    points = points + 1;
+
+                    $("#" + id).draggable( 'disable' );
+                    $(this).droppable( 'disable' );
+                    $("#" + id).css( "background-color", "#7FFF00");
+                    if (points == 6){
+                        callresultswal();
+                        $('#backforward').fadeIn("slow").removeClass("hidden-xl-down");
+                    }
+                }
+            }
+        });
+
     });
 </script>
