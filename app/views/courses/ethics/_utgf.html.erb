@@ -112,6 +112,16 @@
                 var id = ui.draggable.attr('id');
                 var value = $(this).attr('value');
 
+                var $this = $(this);
+                ui.draggable.position({
+                    my: "center",
+                    at: "center",
+                    of: $this,
+                    using: function(pos) {
+                        $(this).animate(pos, 100, "linear");
+                    }
+                });
+
                 console.log(ui.draggable.attr('data-occupier'));
                 $("#" + id).attr('data-occupier', value);
                 console.log(ui.draggable.attr('data-occupier'));
