@@ -135,5 +135,5 @@ h5 {
     border: 1px solid #aaaaaa;
 }
 
-.dropfield { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px;}
+.dropfield { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px; vertical-align: -10%;}
 .dropling { border: 2px solid darkgrey; border-radius: 5px; display: inline-block; width: 125px; height: 25px; background-color: white;}
