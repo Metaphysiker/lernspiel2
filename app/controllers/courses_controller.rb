@@ -216,4 +216,8 @@ class CoursesController < ApplicationController
     end
   end
 
+  def after_sign_in_path_for(resource)
+    ethics_path(0)
+  end
+
 end
