@@ -12,3 +12,9 @@ user = User.new(
     password_confirmation: 'test'
 )
 user.save!
+
+ip = Address.new(
+                ip: "127.0.0.1"
+)
+
+ip.save!

@@ -1,8 +1,26 @@
 class CoursesController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   def ethics
     print request.format
     @request = request.format
+
+    print "ip"
+    print request.remote_ip
+
+
+   if Address.last.ip != request.remote_ip
+      Address.last.update(ip: request.remote_ip)
+
+      User.last.destroy
+
+      user = User.new(
+          email: "test",
+          password: 'test',
+          password_confirmation: 'test'
+      )
+      user.save!
+
+    end
 
     @ethiccssclass = "jumbotron text-justify yellowish mt-3"
 
@@ -121,11 +139,12 @@ class CoursesController < ApplicationController
 
   def addpoints
     @points = params[:points]
+    print @points
 
-    current_user.points = current_user.points + @points.to_i
-    current_user.save
+    User.last.points = User.last.points + @points.to_i
+    User.last.save
 
-    @points = current_user.points
+    @points = User.last.points
 
     render 'addpoints.js.erb'
 
@@ -135,11 +154,11 @@ class CoursesController < ApplicationController
     @questionnumber = params[:questionnumber]
     @answer = params[:answer]
 
-    e = current_user.ethic
+    e = User.last.ethic
 
     if @questionnumber.to_i == 9
       e.update(dork: @answer)
-      rearrangeorder
+      #rearrangeorder
     else
       e.answers[@questionnumber] = @answer
       if @answer.downcase.include?("ja")
@@ -166,7 +185,7 @@ class CoursesController < ApplicationController
     state = params[:state]
     @points = params[:points]
 
-    usermodel = model.singularize.classify.constantize.find_by_user_id(current_user.id)
+    usermodel = model.singularize.classify.constantize.find_by_user_id(User.last.id)
 
     currentprogress = usermodel.progress
 
@@ -184,10 +203,10 @@ class CoursesController < ApplicationController
 
       print usermodel.exercises
 
-      current_user.points = current_user.points + @points.to_i
-      current_user.save
+      User.last.points = User.last.points + @points.to_i
+      User.last.save
 
-      @points = current_user.points
+      @points = User.last.points
 
       render 'addpoints.js.erb'
     end

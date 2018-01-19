@@ -17,9 +17,9 @@
     Hast du geantwortet mit:
   </p>
   <p>
-    <b><%= current_user.ethic.answers["7"] %></b>
+    <b><%= User.last.ethic.answers["7"] %></b>
   </p>
-  <% if current_user.ethic.answers["7"].include?("Nein") %>
+  <% if User.last.ethic.answers["7"].include?("Nein") %>
       <p>
         Deine Antwort ist nicht die, die eine <b>utilitaristischen Ethik</b> empfehlen würde.
       </p>
