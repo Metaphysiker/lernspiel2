@@ -1,13 +1,16 @@
 <div class="jumbotron text-justify yellowish mt-3">
-  <h1>Die philosophische Lernapp</h1>
+  <h2>Der philosophische online Lernkurs</h2>
   <br>
   <p>
-    Warum gibt es Philosophen und Philosophinnen und mit welchen Themen beschäftigen sie sich?
+    Warum gibt es Philosophen und Philosophinnen? Und mit welchen Themen beschäftigen sie sich?
+    <b>Finde es heraus!</b>
   </p>
   <p>
-    Finde es heraus! Probiere einen Kurs aus und sammle dabei Punkte!
+    Auf dieser Seite findest du <b>Kurse</b>, die dich in <b>philosophischen Themen</b> einführen.
   </p>
-  <%= link_to "Zu den Kursen!", courses_path, class: "btn btn-primary btn-lg"  %>
+  <p>
+    <%= link_to "Probiere einen Kurs aus!", ethics_path(0), class: "btn btn-primary btn-lg"  %>
+  </p>
 </div>
 <button type="button" id="addpoints" class="btn btn-primary multilinebutton btn-block hidden-xl-down">PRESS ME!></button>
 

@@ -1,7 +1,9 @@
 class CoursesController < ApplicationController
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
+  before_action :signupandsignin
+
   def ethics
-    print request.format
+
     @request = request.format
 
     @ethiccssclass = "jumbotron text-justify yellowish mt-3"
@@ -12,6 +14,8 @@ class CoursesController < ApplicationController
     else
       @step = params[:step].to_i
     end
+    print "step"
+    print @step
 
     @order = [
         "introduction",
@@ -74,6 +78,8 @@ class CoursesController < ApplicationController
     ]
 
     @currentstep = @order[@step]
+    print "currentstep"
+    print @currentstep
 
     @deontvsutil = [
         ["Statt seinem reichen Freund wie versprochen das Geld zurückzugeben, spendet Stefan es an bedürftige Menschen.","ut", "Stefan versucht bedürftigen Menschen zu helfen und bricht dabei ein Versprechen. Er handelt utilitaristisch."],
@@ -190,6 +196,23 @@ class CoursesController < ApplicationController
       @points = current_user.points
 
       render 'addpoints.js.erb'
+    end
+  end
+
+  def signupandsignin
+    print "jesus"
+    print current_user.nil?
+
+    if current_user.nil?
+      randomname = ('a'..'z').to_a.shuffle[0,8].join
+      user = User.create(
+          email: randomname,
+          password: 'test',
+          password_confirmation: 'test'
+      )
+      sign_in(user)
+
+      redirect_to after_sign_in_path_for(user)
     end
   end
 
